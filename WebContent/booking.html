@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Form for user to fill out -->
+<h1>Form</h1>
+
+<!-- id and onsubmit used for javascript validation -->
+<!-- action of form goes to formInfo.java's doGet method -->
+<form id="theform" action="info" method="get" onsubmit="return Validating()">
+
+<!-- For all inputs in form -->
+<!-- id is used for javascript validation, at Validateform.js -->
+<!-- name is used to transfer user details to formInfo.java's doGet method -->
+
+<!-- User ID. Is a required field. -->
+UserID:
+<br>
+<input type="text" id="username" name="id" required>
+<br>
+<br>
+
+<!-- Phone -->
+Phone:
+<br>
+<input type ="text" name = "phone">
+<br>
+<br>
+
+<!-- Address -->
+Address:
+<br>
+<input type = "text" name = "address">
+<br>
+<br>
+
+<!-- Email. Has a required pattern of x@x . -->
+Email:
+<br>
+Please enter email in the form of xxx@yyy.zzz
+<br>
+<input type = "text" id="mail" name = "email" pattern=".+@.+" required>
+<br>
+<br>
+
+<!-- Security Code -->
+Security Code:
+<p id="websecurity"></p>
+Please enter security code above, in the text box below:
+<br>
+<input type = "text" id="entersecurity" name = "security">
+
+<!-- javascript to generate a random alphanumeric sequence of 6 characters -->
+<script>
+var characters="";
+var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+var length=6;
+for(var i=0;i<length;i++) {
+	characters+=possible.charAt(Math.floor(Math.random()*possible.length));
+}
+
+document.getElementById("websecurity").innerHTML = characters;
+
+</script>
+<br>
+<br>
+
+<!-- reset form -->
+<input type="reset" value="Reset">
+<br>
+<br>
+
+<!-- submit form -->
+<input  type="submit" value="Submit">
+<br>
+</form>
+
+<!-- source file for javascript validation -->
+<script src="Validateform.js"></script>
+</body>
+</html>

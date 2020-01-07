@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+/*sets the background color of the page (page which shows theater seats) (Generator.java)
+*/
+body {
+	background-color:#66E1EF;
+	
+	
+	
+}
+
+/*sets the table visuals
+*/
+table, th, td {
+	border: 1px solid black;
+	width:500px;
+	height:50px;
+	
+	}
+	
+	/*sets the cell colors in the table.
+	green for available.
+	red for unavailable. 
+	*/
+	td.unavail {background-color:red}
+	td.avail {background-color:green}
+	

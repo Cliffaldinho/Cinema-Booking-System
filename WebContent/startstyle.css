@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+/*sets the background color of whole page (starting page) (table.html)
+*/
+body {
+	background-color:#66E1EF;
+	
+	
+	
+}
+
+/*sets visuals of table
+*/
+table, th, td {
+	border: 1px solid black;
+	width:500px;
+	height:50px;
+	
+	}
+	
+	/* sets the background color of each cell in table.
+	all are green.
+	except for the ones containing alphabets.
+	*/
+	td {background-color:green}
+	td.alphabets {background-color:#66E1EF}
